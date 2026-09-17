@@ -1,16 +1,52 @@
-# HTML/CSS-каркас першої лабораторної
+# Lab 1 — Basic HTTP Server
 
-У public/ містяться три HTML-сторінки та спільний CSS без JavaScript,
-зовнішніх шрифтів і мережевих ресурсів. Серверного коду тут немає.
+Реалізація однакового контракту маршрутизації двома стеками: Python та Node.js.
 
-Скопіюйте public/ до кожної з двох реалізацій. Замініть [ПІБ], [ГРУПА],
-[СТЕК], [ВЕРСІЯ] на всіх сторінках і опис реалізації в about.html.
-Версію середовища запишіть за результатом команди перевірки інтерпретатора.
+## Stack verstion
+|Стек|Версія|
+|-------|------|
+|Python|3.14.6|
+|Node.js|26.8.1|
 
-Сервер має читати index.html для /, about.html для /about, styles.css
-для /styles.css, а для інших шляхів — 404.html зі статусом 404.
-Посилання починаються з /, тому передбачають запуск через HTTP-сервер.
-Перегляд через file:// не перевіряє маршрутизацію та може не завантажити CSS.
+## Структура каталогів
+```
+web-apps-course/
+├─ lab1/
+│  ├─ python/
+│  │  ├─ server.py
+│  │  ├─ public/
+│  │  │  ├─ index.html
+│  │  │  ├─ about.html
+│  │  │  ├─ styles.css
+│  │  │  ├─ 404.html
+│  ├─ node/
+│  │  ├─ server.mjs
+│  │  ├─ public/
+│  │  │  ├─ index.html
+│  │  │  ├─ about.html
+│  │  │  ├─ styles.css
+│  │  │  ├─ 404.html
+│  ├─ README.md
+├─ README.md
+├─ .gitignore
+```
+## Клонування репозиторію
 
-Основа серверної частини — приклад 02-catalog першої лекції.
-Повний порядок роботи та перевірок наведено в тексті лабораторної роботи.
+```bash
+git clone https://github.com/RizelBeri/web-apps-course
+```
+## Запуск
+
+### Pyhton
+```bash
+cd web-apps-course/lab1/python/ 
+python server.py
+```
+Адреса: `localhost:3002`
+
+### Node.js
+```bash
+cd web-apps-course/lab1/node/ 
+node server.mjs
+```
+Адреса: `localhost:3001`
